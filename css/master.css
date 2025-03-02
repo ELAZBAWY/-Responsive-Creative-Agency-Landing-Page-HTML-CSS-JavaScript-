@@ -1,0 +1,865 @@
+/* Root variable for the main color */
+:root {
+  --main-color: #ff5722;
+}
+
+/* Reset margin for all elements */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling with default font */
+body {
+  font-family: "Open Sans", sans-serif;
+  user-select: none;
+}
+.container {
+  /* width: 1170px; */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+/* Settings box (hidden by default on the left side) */
+.settings-Box {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  background-color: white;
+  width: 250px;
+  height: 100vh;
+  z-index: 100;
+  transition: 0.3s; /* Smooth transition for the box */
+}
+
+/* Open state for the settings box */
+.settings-Box.open {
+  left: 0;
+}
+
+/* Toggle button for the settings box */
+.settings-Box .toggle-box {
+  position: absolute;
+  right: -30px;
+  background-color: white;
+  padding: 8px 0;
+  top: 100px;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Options section inside the settings box */
+.settings-Box .option-box .colors-list {
+  padding: 0;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px 0 0;
+}
+
+.settings-Box .option-box h2 {
+  color: #607d8b;
+}
+.settings-Box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
+}
+
+/* Color circle options */
+.settings-Box .option-box .colors-list li {
+  display: inline-block;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0.5;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border: 3px solid #eee;
+  margin: 0;
+}
+
+/* Active color option */
+.settings-Box .option-box .colors-list li.active {
+  opacity: 1; /* Border color for the active color */
+  border-color: #fff;
+}
+
+/* Specific colors for the color list */
+.settings-Box .option-box .colors-list li:first-child {
+  background-color: #ff9800;
+}
+
+.settings-Box .option-box .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+
+.settings-Box .option-box .colors-list li:nth-child(3) {
+  background-color: #000000;
+}
+
+.settings-Box .option-box .colors-list li:nth-child(4) {
+  background-color: #03a9f4;
+}
+
+.settings-Box .option-box .colors-list li:nth-child(5) {
+  background-color: #4caf50;
+}
+.settings-Box .randomBack {
+  padding: 16px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
+}
+.settings-Box .randomBack h4 {
+  font-size: 20px;
+  color: #607d8b;
+}
+.settings-Box .randomBack span.yes,
+.settings-Box .randomBack span.no {
+  background-color: #009688;
+  color: white;
+  padding: 2px;
+  width: 50px;
+  display: inline-block;
+  margin-top: 8px;
+  border-radius: 8px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.settings-Box .randomBack span.active {
+  opacity: 1;
+}
+.reset-button {
+  background-color: #ff5722;
+  text-align: center;
+  height: 50px;
+  line-height: 47px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  border-radius: 14px;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+}
+
+/* Start Landing Page Section */
+
+/* Full-page landing section with a background image */
+.Landing-page {
+  background-image: url(../imgs/2.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+}
+.Landing-page .container {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Header area with logo and navigation links */
+.headre-area {
+  position: relative;
+  color: white;
+  display: flex;
+  z-index: 2;
+  padding: 10px;
+}
+.headre-area .links-container {
+  width: 100%;
+  text-align: right;
+}
+
+.headre-area .logo {
+  font-weight: bold;
+  width: 300px;
+  padding: 10px;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* .headre-area .links {
+  list-style: none;
+  text-align: right;
+  padding: 0 20px 0 0;
+  font-size: 15px;
+}
+
+.headre-area .links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.headre-area .links a {
+  text-decoration: none;
+  color: white;
+}
+
+.headre-area .links a:hover,
+.headre-area .links a.active {
+  color: var(--main-color);
+  transition: 0.4s;
+} */
+
+/* Introduction text centered in the landing page */
+.interduction-text {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: center;
+  width: 100%;
+}
+
+.interduction-text span {
+  color: var(--main-color);
+}
+
+.interduction-text p {
+  line-height: 1.6;
+  font-size: 25px;
+}
+
+.interduction-text h1 {
+  margin: 0 0 5px;
+  font-size: 40px;
+}
+
+/* End Landing Page Section */
+/* <!-- start About As -->*/
+.About-us {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+@media (max-width: 575px) {
+  .About-us {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    display: block;
+  }
+}
+.About-us .info-box {
+  flex: 1;
+  padding: 30px;
+}
+.About-us .info-box p {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.About-us .info-box h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.About-us .image-box {
+  flex: 1;
+  text-align: center;
+}
+.About-us .image-box img {
+  width: 250px;
+}
+
+/* <!-- End About As -->*/
+/* Start Skills */
+.Skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+}
+.Skills h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 10px;
+}
+.Skills .Skill-Box {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+.Skills .Skill-Box .Skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+}
+.Skills .Skill-Box .Skill-Progress {
+  background-color: #f5f0f0;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.Skills .Skill-Box .Skill-Progress span {
+  position: absolute;
+  background-color: var(--main-color);
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+/* End Skills */
+/* Start Our Gallery  */
+.gallery {
+  padding-top: 50px; /* Top padding for spacing */
+  padding-bottom: 50px; /* Bottom padding for spacing */
+  background-color: #f9f9f9; /* Section background color */
+}
+
+.gallery h2 {
+  text-align: center; /* Center the heading text */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 30px; /* Font size of the heading */
+  color: var(--main-color); /* Heading color using a custom variable */
+  margin: 0 0 20px; /* Add bottom margin for spacing */
+}
+
+.gallery .images-box {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+  gap: 10px; /* Add spacing between images */
+}
+
+.gallery .images-box img {
+  width: 150px; /* Set image width */
+  height: 100px; /* Set image height */
+  padding: 5px; /* Add padding around images */
+  border: 2px solid #eee; /* Light gray border */
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover effect */
+  cursor: pointer;
+}
+
+.gallery .images-box img:hover {
+  transform: scale(1.1); /* Scale image on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  border-color: var(--main-color); /* Change border color on hover */
+}
+
+/* Responsive design for tablets and small screens */
+@media (max-width: 768px) {
+  .gallery .images-box img {
+    width: 120px; /* Reduce image width */
+    height: 80px; /* Reduce image height */
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery .images-box img {
+    width: 100px; /* Further reduce image width */
+    height: 70px; /* Further reduce image height */
+  }
+}
+
+.popView {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+.popbox {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1001;
+}
+.popbox img {
+  max-width: 100%;
+}
+.popbox h3 {
+  text-align: center; /* Center the heading text */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 20px; /* Font size of the heading */
+  color: var(--main-color); /* Heading color using a custom variable */
+  margin: 0 0 10px; /* Add bottom margin for spacing */
+}
+.popbox span {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  color: white;
+  background-color: var(--main-color);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  line-height: 40px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* End Our Gallery  */
+/* Start Time Line */
+.timeline {
+  padding-top: 50px; /* Top padding for spacing */
+  padding-bottom: 50px; /* Bottom padding for spacing */
+  background-color: #f9f9f9; /* Section background color */
+}
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+.timeline .timeline-content::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: var(--main-color);
+  left: 50%;
+  margin: -1px;
+  top: 0;
+}
+.timeline .timeline-content .year {
+  background-color: var(--main-color);
+  color: #fff;
+  width: 50px;
+  margin: 20px auto;
+  z-index: 2;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  width: calc(50% - 25px);
+  margin-bottom: 40px;
+  position: relative;
+}
+.timeline .timeline-content .right {
+  float: right;
+}
+.timeline .timeline-content .right::before {
+  left: -35px;
+}
+.timeline .timeline-content .right::before,
+.timeline .timeline-content .left::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  border-radius: 50%;
+  top: 20px;
+}
+.timeline .timeline-content .right::after,
+.timeline .timeline-content .left::after {
+  content: "";
+  border-style: solid;
+  border-color: transparent transparent transparent #48434363;
+  border-width: 10px;
+  width: 0;
+  height: 0;
+  right: -20px;
+  top: 20px;
+  position: absolute;
+}
+.timeline .timeline-content .right::after {
+  border-color: transparent #48434363 transparent transparent;
+  left: -20px;
+}
+.timeline .timeline-content .left {
+  float: left;
+}
+.timeline .timeline-content .left::before {
+  right: -35px;
+}
+.timeline .timeline-content .content {
+  background-color: #eee;
+  padding: 20px;
+}
+
+.timeline .timeline-content .content h3 {
+  font-weight: bold; /* Make the heading bold */
+  font-size: 30px; /* Font size of the heading */
+  color: var(--main-color); /* Heading color using a custom variable */
+  margin: 0 0 20px; /* Add bottom margin for spacing */
+}
+.timeline .timeline-content .content p {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+.clearFix {
+  clear: both;
+}
+@media (max-width: 576px) {
+  .timeline .timeline-content .left,
+  .timeline .timeline-content .right{
+    width: 100%;
+  }
+}
+
+/* End Time Line */
+/* Start Features */
+.features {
+  padding-top: 80px; /* Top padding for spacing */
+  padding-bottom: 80px; /* Bottom padding for spacing */
+  background-color: #f9f9f9; /* Section background color */
+}
+.features h2 {
+  text-align: center; /* Center the heading text */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 30px; /* Font size of the heading */
+  color: var(--main-color); /* Heading color using a custom variable */
+  margin: 0 0 60px; /* Add bottom margin for spacing */
+}
+.features .feat-box {
+  width: calc(100% / 3);
+  float: left;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.features .feat-box img {
+  width: 96px;
+}
+.features .feat-box h3 {
+  font-size: 22px;
+  margin: 15px 0 40px;
+  position: relative;
+}
+.features .feat-box h3::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  top: 123%;
+  transform: translate(-50%, -50%);
+}
+.features .feat-box p {
+  line-height: 1.8;
+  color: #767676;
+  margin: 0;
+}
+@media (max-width:576px) {
+  .features .feat-box{
+    width: 100%;
+  }
+}
+.testimonials {
+  position: relative;
+  min-height: 600px;
+  padding-top: 80px; /* Top padding for spacing */
+  padding-bottom: 80px; /* Bottom padding for spacing */
+  background-color: #f9f9f9; /* Section background color */
+}
+.testimonials::before {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.testimonials::after {
+  content: "";
+  position: absolute;
+  background-color: #333;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.testimonials h2 {
+  z-index: 2;
+  font-weight: bold;
+  text-align: left;
+  margin: 0 0 30px;
+  color: #fff;
+  font-size: 30px;
+  position: relative;
+}
+.testimonials .ts-box {
+  z-index: 1;
+  position: relative;
+  width: calc(98% / 3);
+  background-color: #fff;
+  padding: 20px;
+  font-size: 20px;
+  float: left;
+}
+@media (max-width: 576px) {
+  .testimonials .ts-box {
+  width: 100%;
+  float: none;
+  margin-bottom: 10px;
+  }
+}
+@media (max-width:576px){
+  .testimonials .ts-box .person-info{
+    text-align: center;
+  }
+  .testimonials h2{
+    text-align: center;
+  }
+
+}
+
+
+.testimonials .ts-box:not(:last-of-type) {
+  margin-right: 1%;
+}
+/* End Features */
+
+/* Start Nav Bar */
+.Nav-content {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Navigation Bullets */
+.Nav-content .bullet {
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--main-color);
+  background-color: transparent;
+  border-radius: 50%;
+  margin: 10px auto;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Add a hover effect for the bullet */
+.Nav-content .bullet:hover {
+  background-color: var(--main-color);
+}
+
+/* Tooltip for Navigation Bullets */
+.Nav-content .bullet .tooltip {
+  background-color: var(--main-color);
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  right: -120px; /* Start off-screen */
+  transform: translateY(-50%);
+  width: 106px;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 4px;
+  opacity: 0; /* Hidden by default */
+  visibility: hidden;
+  transition: opacity 0.3s ease, right 0.3s ease;
+  z-index: 2;
+}
+
+/* Tooltip Arrow */
+.Nav-content .bullet .tooltip::before {
+  content: "";
+  position: absolute;
+  border: 8px solid;
+  border-color: transparent transparent transparent var(--main-color);
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Show Tooltip on Hover */
+.Nav-content .bullet:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  right: 40px; /* Slide into view */
+}
+
+/* End Nav Bar */
+/* start conatct us  */
+.contact {
+  min-height: 600px;
+  background-image: url("/imgs/conract.png");
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.contact .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgb(255 255 255 / 60%); */
+}
+.contact .container {
+  position: relative;
+  z-index: 2;
+}
+.contact h2 {
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--main-color);
+  margin: 0 0 60px;
+  text-align: center;
+}
+.contact form {
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+}
+.contact form .left {
+  float: left;
+  width: 49%;
+}
+.contact form .right {
+  float: right;
+  width: 49%;
+}
+@media (max-width: 767px) {
+  .contact form .left,
+  .contact form .right {
+    float: none;
+    width: 100%;
+  }
+}
+.contact form input:not([type="submit"]),
+.contact form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: rgba(218, 218, 218, 0.19);
+}
+.contact form input:not([type="submit"]):focus,
+.contact form textarea:focus {
+  outline: 1px solid var(--main-color);
+}
+.contact form input {
+  height: 40px;
+}
+.contact form textarea {
+  height: 150px;
+}
+.contact form input[type="submit"] {
+  padding: 10px;
+  width: 100%;
+  border-color: transparent;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* .headre-area .toggle-menue span {
+    display: block;
+  } */
+/* .headre-area .links li {
+    display: none;
+  } */
+.headre-area .links.open li {
+  display: block;
+  margin: 10px;
+}
+.headre-area .links.open {
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 58px;
+  border-radius: 8px;
+  text-align: left;
+}
+.headre-area .links.open li a {
+  color: var(--main-color);
+  text-decoration: none;
+  opacity: 0.5;
+}
+.headre-area .links.open li a:hover {
+  opacity: 1;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.headre-area .links {
+  display: none;
+}
+.headre-area .toggle-menue {
+  display: inline-block;
+}
+
+.headre-area .toggle-menue {
+  background: none;
+  border: none;
+  position: relative;
+}
+.headre-area .toggle-menue.open::before {
+  content: "";
+  border-width: 10px;
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+  position: relative;
+  top: 19px;
+}
+.headre-area .toggle-menue span {
+  background-color: #eeee;
+  width: 26px;
+  height: 3px;
+  margin-bottom: 4px;
+  text-align: right;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.headre-area .links {
+  list-style: none;
+  text-align: right;
+  padding: 0 20px 0 0;
+  font-size: 15px;
+}
+
+.headre-area .links li {
+  display: inline-block;
+  margin-left: 10px;
+}
+.footer {
+  background-color: #333;
+  color: #EEE;
+  padding: 20px;
+  text-align: center;
+}
